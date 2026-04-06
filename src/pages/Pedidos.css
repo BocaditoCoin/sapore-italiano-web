@@ -1,0 +1,290 @@
+.pedidos-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pedidos-page h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #ffd700, #f4a460);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.pedidos-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+}
+
+/* Login Required */
+.login-required, .pedido-confirmado {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(45, 24, 16, 0.4);
+  border-radius: 20px;
+  border: 1px solid rgba(200, 120, 50, 0.2);
+}
+
+.login-required svg, .confirm-icon {
+  color: #c87832;
+  margin-bottom: 1.5rem;
+}
+
+.login-required h2, .pedido-confirmado h2 {
+  font-family: 'Playfair Display', serif;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #c87832, #f4a460);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Categorías */
+.categorias-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.categorias-tabs button {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(200, 120, 50, 0.3);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categorias-tabs button:hover {
+  border-color: #c87832;
+  color: #f4a460;
+}
+
+.categorias-tabs button.active {
+  background: linear-gradient(135deg, #c87832, #f4a460);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Platos */
+.platos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.plato-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(45, 24, 16, 0.3);
+  border: 1px solid rgba(200, 120, 50, 0.15);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.plato-item:hover {
+  border-color: #c87832;
+}
+
+.plato-info h3 {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 0 0.25rem 0;
+}
+
+.plato-info p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.plato-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.precio {
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.btn-add {
+  padding: 0.5rem;
+  border: none;
+  background: linear-gradient(135deg, #c87832, #f4a460);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Carrito */
+.carrito-section {
+  background: rgba(45, 24, 16, 0.5);
+  border: 1px solid rgba(200, 120, 50, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.carrito-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffd700;
+  margin-bottom: 1.5rem;
+}
+
+.empty-cart {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+}
+
+.carrito-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(26, 15, 10, 0.5);
+  border-radius: 8px;
+}
+
+.item-nombre {
+  font-size: 0.9rem;
+}
+
+.item-cantidad {
+  font-size: 0.8rem;
+  color: #f4a460;
+  margin-left: 0.5rem;
+}
+
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.item-controls button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-subtotal {
+  font-weight: 600;
+  color: #ffd700;
+  min-width: 60px;
+  text-align: right;
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: 2px solid rgba(200, 120, 50, 0.3);
+  font-size: 1.2rem;
+}
+
+.total-precio {
+  font-weight: 700;
+  color: #ffd700;
+}
+
+/* Recogida */
+.recogida-info {
+  margin-top: 1.5rem;
+}
+
+.recogida-info label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.recogida-info input,
+.recogida-info textarea {
+  padding: 0.75rem;
+  border: 1px solid rgba(200, 120, 50, 0.3);
+  background: rgba(26, 15, 10, 0.5);
+  color: #fff;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.recogida-info textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.btn-pedir {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border: none;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-pedir:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(39, 174, 96, 0.4);
+}
+
+@media (max-width: 900px) {
+  .pedidos-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .carrito-section {
+    position: static;
+  }
+}

@@ -1,0 +1,101 @@
+import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Home, Utensils, ShoppingCart, Heart, User, Menu, X } from 'lucide-react'
+import './Layout.css'
+
+function Layout({ children, cliente, logout }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+  
+  const navItems = [
+    { path: '/', icon: Home, label: 'Inicio' },
+    { path: '/carta', icon: Utensils, label: 'Ver Carta' },
+    { path: '/pedidos', icon: ShoppingCart, label: 'Pedidos Online' },
+    { path: '/deseos', icon: Heart, label: 'Mi Lista' },
+  ]
+
+  return (
+    <div className="app-wrapper">
+      <header className="header">
+        <div className="header-content">
+          <Link to="/" className="logo">
+            <span className="logo-icon">🍝</span>
+            <span className="logo-text">Sapore Italiano</span>
+          </Link>
+          
+          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+          
+          <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+            {navItems.map(item => (
+              <Link 
+                key={item.path}
+                to={item.path} 
+                className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                <item.icon size={20} />
+                <span>{item.label}</span>
+              </Link>
+            ))}
+            
+            {cliente ? (
+              <div className="user-menu">
+                <span className="user-name">👋 {cliente.nombre}</span>
+                <button className="btn-logout" onClick={logout}>Salir</button>
+              </div>
+            ) : (
+              <Link to="/login" className="nav-link primary" onClick={() => setMenuOpen(false)}>
+                <User size={20} />
+                <span>Entrar</span>
+              </Link>
+            )}
+          </nav>
+        </div>
+      </header>
+
+      <main className="main-content">
+        {children}
+      </main>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>🍝 Sapore Italiano</h3>
+            <p>Auténtica cocina italiana en el corazón de Coín</p>
+            <p>Plaza la Alameda 32</p>
+            <p>29100 Coín, Málaga</p>
+          </div>
+          
+          <div className="footer-section">
+            <h3>📞 Contacto</h3>
+            <a href="tel:637068182">📱 637 06 81 82</a>
+            <a href="mailto:info@saporeitaliano.es">✉️ info@saporeitaliano.es</a>
+          </div>
+          
+          <div className="footer-section">
+            <h3>🕐 Horario</h3>
+            <p>Lun - Jue: 12:00 - 23:00</p>
+            <p>Vie - Sáb: 12:00 - 00:00</p>
+            <p>Domingo: 12:00 - 23:00</p>
+          </div>
+          
+          <div className="footer-section">
+            <h3>📱 Síguenos</h3>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TripAdvisor</a>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>© 2024 Sapore Italiano - Todos los derechos reservados</p>
+          <p>🍕 Hecho con amor italiano</p>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default Layout

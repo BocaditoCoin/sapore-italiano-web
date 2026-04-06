@@ -1,0 +1,176 @@
+.carta-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carta-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.carta-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #ffd700, #f4a460);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.carta-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+.carta-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.carta-toggle button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(200, 120, 50, 0.3);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carta-toggle button:hover {
+  border-color: #c87832;
+  color: #f4a460;
+}
+
+.carta-toggle button.active {
+  background: linear-gradient(135deg, #c87832, #f4a460);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Categorías */
+.categoria-section {
+  margin-bottom: 1rem;
+}
+
+.categoria-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(45, 24, 16, 0.6), rgba(26, 15, 10, 0.8));
+  border: 1px solid rgba(200, 120, 50, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoria-header:hover {
+  border-color: #c87832;
+  background: linear-gradient(135deg, rgba(200, 120, 50, 0.2), rgba(45, 24, 16, 0.8));
+}
+
+.categoria-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.categoria-emoji {
+  font-size: 1.5rem;
+}
+
+.categoria-count {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Platos Grid */
+.platos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.plato-card {
+  background: rgba(45, 24, 16, 0.4);
+  border: 1px solid rgba(200, 120, 50, 0.15);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.plato-card:hover {
+  border-color: #c87832;
+  transform: translateY(-2px);
+}
+
+.plato-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.plato-header h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+  flex: 1;
+}
+
+.plato-precio {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffd700;
+  background: linear-gradient(135deg, rgba(200, 120, 50, 0.3), rgba(255, 215, 0, 0.2));
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+}
+
+.plato-ingredientes {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Footer */
+.carta-footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background: rgba(200, 120, 50, 0.1);
+  border-radius: 16px;
+}
+
+.carta-footer p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0.5rem 0;
+}
+
+.carta-footer a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .platos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .carta-toggle {
+    flex-direction: column;
+  }
+}
