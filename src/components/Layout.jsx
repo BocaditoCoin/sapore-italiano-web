@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Home, Utensils, ShoppingCart, Heart, User, Menu, X } from 'lucide-react'
 import './Layout.css'
 
-function Layout({ cliente, logout }) {
+function Layout({ cliente, logout, children }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   
@@ -18,7 +18,7 @@ function Layout({ cliente, logout }) {
     <div className="app-wrapper">
       <header className="header">
         <div className="header-content">
-          <Link to="/" className="logo">
+          <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
             <span className="logo-icon">🍝</span>
             <span className="logo-text">Sapore Italiano</span>
           </Link>
