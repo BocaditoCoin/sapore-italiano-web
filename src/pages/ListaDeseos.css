@@ -1,6 +1,6 @@
 .deseos-page {
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -11,40 +11,39 @@
 
 .deseos-header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  background: linear-gradient(90deg, #ffd700, #f4a460);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 2.3rem;
+  color: #cd853f;
   margin-bottom: 0.5rem;
 }
 
 .deseos-header p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
 }
 
 .login-required, .empty-deseos {
   text-align: center;
   padding: 4rem 2rem;
-  background: rgba(45, 24, 16, 0.4);
+  background: rgba(30, 20, 15, 0.4);
   border-radius: 20px;
-  border: 1px solid rgba(200, 120, 50, 0.2);
+  border: 1px solid rgba(205, 133, 63, 0.2);
 }
 
 .login-required svg, .empty-deseos svg {
-  color: #c87832;
+  color: #8b4513;
   margin-bottom: 1.5rem;
 }
 
 .login-required h2, .empty-deseos h2 {
   font-family: 'Playfair Display', serif;
-  color: #ffd700;
+  color: #cd853f;
   margin-bottom: 1rem;
 }
 
 .btn-primary {
   display: inline-flex;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #c87832, #f4a460);
+  background: linear-gradient(135deg, #8b4513, #cd853f);
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
@@ -52,70 +51,73 @@
   margin-top: 1.5rem;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .deseos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
 }
 
 .deseo-card {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: linear-gradient(135deg, rgba(45, 24, 16, 0.5), rgba(26, 15, 10, 0.8));
-  border: 1px solid rgba(200, 120, 50, 0.2);
-  border-radius: 16px;
-  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(30, 20, 15, 0.5), rgba(13, 9, 8, 0.7));
+  border: 1px solid rgba(205, 133, 63, 0.15);
+  border-radius: 14px;
+  padding: 1.3rem;
   transition: all 0.3s ease;
 }
 
 .deseo-card:hover {
-  border-color: #c87832;
+  border-color: rgba(205, 133, 63, 0.4);
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .deseo-content h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #fff;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.4rem 0;
 }
 
 .deseo-content p {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0 0 0.75rem 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 0.6rem 0;
   line-height: 1.5;
 }
 
 .deseo-precio {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #ffd700;
+  color: #daa520;
 }
 
 .btn-delete {
   padding: 0.5rem;
-  border: 1px solid rgba(231, 76, 60, 0.3);
+  border: 1px solid rgba(239, 83, 80, 0.25);
   background: transparent;
-  color: #e74c3c;
+  color: #ef5350;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn-delete:hover {
-  background: rgba(231, 76, 60, 0.2);
-  border-color: #e74c3c;
+  background: rgba(239, 83, 80, 0.15);
+  border-color: #ef5350;
 }
 
 .deseos-footer {
   margin-top: 3rem;
   padding: 1.5rem;
-  background: rgba(200, 120, 50, 0.1);
+  background: rgba(139, 69, 19, 0.1);
   border-radius: 12px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(205, 133, 63, 0.15);
+  font-size: 0.95rem;
 }

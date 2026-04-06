@@ -6,15 +6,13 @@
 
 .pedidos-page h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  background: linear-gradient(90deg, #ffd700, #f4a460);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 2.3rem;
+  color: #cd853f;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 2rem;
 }
 
@@ -28,26 +26,26 @@
 .login-required, .pedido-confirmado {
   text-align: center;
   padding: 4rem 2rem;
-  background: rgba(45, 24, 16, 0.4);
+  background: rgba(30, 20, 15, 0.4);
   border-radius: 20px;
-  border: 1px solid rgba(200, 120, 50, 0.2);
+  border: 1px solid rgba(205, 133, 63, 0.2);
 }
 
 .login-required svg, .confirm-icon {
-  color: #c87832;
+  color: #8b4513;
   margin-bottom: 1.5rem;
 }
 
 .login-required h2, .pedido-confirmado h2 {
   font-family: 'Playfair Display', serif;
-  color: #ffd700;
+  color: #cd853f;
   margin-bottom: 1rem;
 }
 
 .btn-primary {
   display: inline-flex;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #c87832, #f4a460);
+  background: linear-gradient(135deg, #8b4513, #cd853f);
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
@@ -55,6 +53,12 @@
   margin-top: 1.5rem;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(139, 69, 19, 0.4);
 }
 
 /* Categorías */
@@ -67,21 +71,22 @@
 
 .categorias-tabs button {
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(200, 120, 50, 0.3);
+  border: 1px solid rgba(205, 133, 63, 0.25);
   background: transparent;
   color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .categorias-tabs button:hover {
-  border-color: #c87832;
-  color: #f4a460;
+  border-color: #cd853f;
+  color: #cd853f;
 }
 
 .categorias-tabs button.active {
-  background: linear-gradient(135deg, #c87832, #f4a460);
+  background: linear-gradient(135deg, #8b4513, #cd853f);
   color: #fff;
   border-color: transparent;
 }
@@ -98,24 +103,24 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: rgba(45, 24, 16, 0.3);
-  border: 1px solid rgba(200, 120, 50, 0.15);
+  background: rgba(30, 20, 15, 0.35);
+  border: 1px solid rgba(205, 133, 63, 0.12);
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .plato-item:hover {
-  border-color: #c87832;
+  border-color: rgba(205, 133, 63, 0.35);
 }
 
 .plato-info h3 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #fff;
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.2rem 0;
 }
 
 .plato-info p {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
 }
@@ -128,22 +133,27 @@
 
 .precio {
   font-weight: 700;
-  color: #ffd700;
+  color: #daa520;
 }
 
 .btn-add {
   padding: 0.5rem;
   border: none;
-  background: linear-gradient(135deg, #c87832, #f4a460);
+  background: linear-gradient(135deg, #8b4513, #cd853f);
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+  transform: scale(1.1);
 }
 
 /* Carrito */
 .carrito-section {
-  background: rgba(45, 24, 16, 0.5);
-  border: 1px solid rgba(200, 120, 50, 0.2);
+  background: rgba(30, 20, 15, 0.5);
+  border: 1px solid rgba(205, 133, 63, 0.2);
   border-radius: 20px;
   padding: 1.5rem;
   position: sticky;
@@ -155,8 +165,9 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #ffd700;
+  color: #cd853f;
   margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .empty-cart {
@@ -178,7 +189,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem;
-  background: rgba(26, 15, 10, 0.5);
+  background: rgba(13, 9, 8, 0.5);
   border-radius: 8px;
 }
 
@@ -188,7 +199,7 @@
 
 .item-cantidad {
   font-size: 0.8rem;
-  color: #f4a460;
+  color: #cd853f;
   margin-left: 0.5rem;
 }
 
@@ -200,16 +211,20 @@
 
 .item-controls button {
   padding: 0.25rem 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(205, 133, 63, 0.2);
   background: transparent;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
 }
 
+.item-controls button:hover {
+  background: rgba(205, 133, 63, 0.2);
+}
+
 .item-subtotal {
   font-weight: 600;
-  color: #ffd700;
+  color: #daa520;
   min-width: 60px;
   text-align: right;
 }
@@ -219,13 +234,13 @@
   justify-content: space-between;
   padding: 1rem;
   margin-top: 1rem;
-  border-top: 2px solid rgba(200, 120, 50, 0.3);
-  font-size: 1.2rem;
+  border-top: 2px solid rgba(205, 133, 63, 0.2);
+  font-size: 1.15rem;
 }
 
 .total-precio {
   font-weight: 700;
-  color: #ffd700;
+  color: #daa520;
 }
 
 /* Recogida */
@@ -238,17 +253,24 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
 }
 
 .recogida-info input,
 .recogida-info textarea {
   padding: 0.75rem;
-  border: 1px solid rgba(200, 120, 50, 0.3);
-  background: rgba(26, 15, 10, 0.5);
+  border: 1px solid rgba(205, 133, 63, 0.25);
+  background: rgba(13, 9, 8, 0.5);
   color: #fff;
   border-radius: 8px;
   font-family: inherit;
+}
+
+.recogida-info input:focus,
+.recogida-info textarea:focus {
+  outline: none;
+  border-color: #cd853f;
 }
 
 .recogida-info textarea {
@@ -263,11 +285,11 @@
   justify-content: center;
   gap: 0.75rem;
   padding: 1rem;
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  background: linear-gradient(135deg, #2e7d32, #43a047);
   border: none;
   color: #fff;
   border-radius: 12px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;
   margin-top: 1rem;
@@ -276,7 +298,7 @@
 
 .btn-pedir:hover {
   transform: scale(1.02);
-  box-shadow: 0 5px 20px rgba(39, 174, 96, 0.4);
+  box-shadow: 0 5px 20px rgba(46, 125, 50, 0.4);
 }
 
 @media (max-width: 900px) {
